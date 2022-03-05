@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LVhq5fbgvzlaQH0qwUF88rMHVkIjRfZAKAoM8xCzNPg=",
+  "Hash": "nX6+NNnsr0hUL19s38JVLDBxVifhHv5hek6ZcCGWtZc=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -406,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\zoom.png"
+    },
+    {
+      "Identity": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\WebApp\\wwwroot\\index.html",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
       "Identity": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\WebApp\\wwwroot\\js\\main.js",

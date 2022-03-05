@@ -5,12 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-var emailConfig = builder.Configuration
-    .GetSection("EmailConfiguration")
-    .Get<EmailConfiguration>();
-builder.Services.AddControllers();
 
+builder.Services.AddSingleton(builder.Configuration.
+    GetSection("EmailConfiguration").Get<EmailConfiguration>());
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
