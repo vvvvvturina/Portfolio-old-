@@ -9,9 +9,7 @@ var app = builder.Build();
 var emailConfig = builder.Configuration
     .GetSection("EmailConfiguration")
     .Get<EmailConfiguration>();
-builder.Services.AddSingleton(emailConfig);
 builder.Services.AddControllers();
-builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 
 // Configure the HTTP request pipeline.
