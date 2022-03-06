@@ -9,6 +9,7 @@
       "Misc/1.0.0": {
         "dependencies": {
           "MailKit": "3.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0-preview.1.22076.8",
           "MimeKit": "3.1.1"
         },
         "runtime": {
@@ -23,6 +24,14 @@
           "lib/net6.0/MailKit.dll": {
             "assemblyVersion": "3.1.0.0",
             "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/7.0.0-preview.1.22076.8": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.7608"
           }
         }
       },
@@ -80,6 +89,13 @@
       "sha512": "sha512-NprdMF0ABNWOqQUuqz45X5YkJK6f3vtYwwvqR6nGVdmrZ7HkahNbSATpOZ5Rj3W1cgDGf/iD8vs/oCyZ4wUO7g==",
       "path": "mailkit/3.1.1",
       "hashPath": "mailkit.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/7.0.0-preview.1.22076.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBsEDA5RQ2naY8Ic9KIrPBQsVaElMb3XmelE4PgmNhPLRKqg6GOqOBIRiYD1Z8pQD6UXT2jNGIGRXayvjS1Img==",
+      "path": "microsoft.extensions.logging.abstractions/7.0.0-preview.1.22076.8",
+      "hashPath": "microsoft.extensions.logging.abstractions.7.0.0-preview.1.22076.8.nupkg.sha512"
     },
     "MimeKit/3.1.1": {
       "type": "package",

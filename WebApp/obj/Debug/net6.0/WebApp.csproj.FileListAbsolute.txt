@@ -30,3 +30,4 @@ C:\Users\Владислава\RiderProjects\Portfolio\WebApp\bin\Debug\net6.0\Bo
 C:\Users\Владислава\RiderProjects\Portfolio\WebApp\bin\Debug\net6.0\Misc.dll
 C:\Users\Владислава\RiderProjects\Portfolio\WebApp\bin\Debug\net6.0\Misc.pdb
 C:\Users\Владислава\RiderProjects\Portfolio\WebApp\obj\Debug\net6.0\WebApp.csproj.CopyComplete
+C:\Users\Владислава\RiderProjects\Portfolio\WebApp\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

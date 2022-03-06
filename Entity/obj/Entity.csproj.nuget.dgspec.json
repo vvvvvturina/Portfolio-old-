@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Misc\\Misc.csproj": {}
+    "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Misc\\Misc.csproj": {
+    "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Misc\\Misc.csproj",
-        "projectName": "Misc",
-        "projectPath": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Misc\\Misc.csproj",
+        "projectUniqueName": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Entity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\Владислава\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Misc\\obj\\",
+        "outputPath": "C:\\Users\\Владислава\\RiderProjects\\Portfolio\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Владислава\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,17 +40,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "MailKit": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[7.0.0-preview.1.22076.6, )"
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.0-preview.1.22076.8, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[7.0.0-preview.1.22076.6, )"
             }
           },
           "imports": [

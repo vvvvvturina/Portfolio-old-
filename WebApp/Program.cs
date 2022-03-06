@@ -3,11 +3,13 @@ using Misc.Services.EmailService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<EmailSender>();
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddSingleton(builder.Configuration.
-    GetSection("EmailConfiguration").Get<EmailConfiguration>());
+builder.Services.AddSingleton(builder.Configuration
+    .GetSection("EmailConfiguration")
+    .Get<EmailConfiguration>());
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 

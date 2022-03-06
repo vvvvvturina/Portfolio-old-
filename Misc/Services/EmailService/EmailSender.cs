@@ -1,5 +1,7 @@
 ﻿using MimeKit;
-using MailKit.Net.Smtp;
+using Microsoft.Extensions.Logging;
+using Org.BouncyCastle.Tls;
+using SmtpClient = MailKit.Net.Smtp.SmtpClient;
 
 namespace Misc.Services.EmailService;
 
@@ -7,53 +9,42 @@ public class EmailSender : IEmailSender
 {
     private readonly EmailConfiguration _emailConfig;
 
-    public EmailSender(EmailConfiguration emailConfig)
+    private readonly ILogger<EmailSender> _logger;
+    public EmailSender(ILogger<EmailSender> logger, EmailConfiguration emailConfig)
     {
         _emailConfig = emailConfig;
+        _logger = logger;
     }
 
-    public void SendEmail(Message message)
+    public void SendEmail(string messageBody)
     {
-        throw new NotImplementedException();
-    }
-
-    public async Task SendEmailAsync(Message message)
-    {
-        var emailMessage = CreateEmailMessage(message);
-        await SendAsync(emailMessage);
-    }
-
-    private MimeMessage CreateEmailMessage(Message message)
-    {
-        var emailMessage = new MimeMessage();
-        emailMessage.From.Add(new MailboxAddress(_emailConfig.From, _emailConfig.From));
-        emailMessage.To.AddRange(message.To);
-        emailMessage.Subject = message.Subject;
-        emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Text) {Text = message.Content};
-        return emailMessage;
-    }
-
-    private async Task SendAsync(MimeMessage mailMessage)
-    {
-        using (var client = new SmtpClient())
+        var message = CreateEmailMessage(messageBody.ToString());
+        try
         {
-            try
+            using (SmtpClient client = new SmtpClient())
             {
-                await client.ConnectAsync(_emailConfig.SmtpServer, _emailConfig.Port, true);
-                client.AuthenticationMechanisms.Remove("XOAUTH2");
-                await client.AuthenticateAsync(_emailConfig.UserName, _emailConfig.Password);
-                await client.SendAsync(mailMessage);
-            }
-            catch
-            {
-                //log an error message or throw an exception or both.
-                throw;
-            }
-            finally
-            {
-                await client.DisconnectAsync(true);
-                client.Dispose();
+                client.Connect("smtp.gmail.com", 465, true);
+                client.Authenticate("mail@gmail.com", "pass");
+                client.Send(message);
+                
+                client.Disconnect(true);
+                _logger.LogInformation("message sent successfully");
             }
         }
+        catch (Exception e)
+        {
+            _logger.LogError(e.GetBaseException().Message);
+        }
+    }
+    
+
+    public MimeMessage CreateEmailMessage(string mesBody)
+    {
+        MimeMessage message = new MimeMessage();
+        message.From.Add(new MailboxAddress("mail@gmail.com","mail@gmail.com"));
+        message.To.Add(new MailboxAddress("vltr", "receiver@gmail.com"));
+        message.Subject = "new message using mailkil";
+        message.Body = new BodyBuilder() {HtmlBody = $"<div style=\"color: green;\">{mesBody}</div>"}.ToMessageBody();
+        return message;
     }
 }
