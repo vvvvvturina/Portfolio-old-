@@ -1,6 +1,7 @@
 ﻿using MimeKit;
 using Microsoft.Extensions.Logging;
 using Org.BouncyCastle.Tls;
+using Portfolio.Misc.Services.EmailService;
 using SmtpClient = MailKit.Net.Smtp.SmtpClient;
 
 namespace Misc.Services.EmailService;

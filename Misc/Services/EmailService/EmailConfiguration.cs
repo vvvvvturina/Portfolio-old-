@@ -1,4 +1,4 @@
-﻿namespace Misc.Services.EmailService;
+﻿namespace Portfolio.Misc.Services.EmailService;
 
 public class EmailConfiguration
 {

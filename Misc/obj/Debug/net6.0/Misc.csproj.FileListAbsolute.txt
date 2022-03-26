@@ -10,3 +10,5 @@ C:\Users\Владислава\RiderProjects\Portfolio\Misc\obj\Debug\net6.0\Misc
 C:\Users\Владислава\RiderProjects\Portfolio\Misc\obj\Debug\net6.0\refint\Misc.dll
 C:\Users\Владислава\RiderProjects\Portfolio\Misc\obj\Debug\net6.0\Misc.pdb
 C:\Users\Владислава\RiderProjects\Portfolio\Misc\obj\Debug\net6.0\ref\Misc.dll
+C:\Users\Владислава\RiderProjects\Portfolio\Misc\bin\Debug\net6.0\Misc.runtimeconfig.json
+C:\Users\Владислава\RiderProjects\Portfolio\Misc\obj\Debug\net6.0\Misc.genruntimeconfig.cache

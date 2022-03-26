@@ -1,4 +1,7 @@
+using DataAccess;
+using Microsoft.EntityFrameworkCore;
 using Misc.Services.EmailService;
+using Portfolio.Misc.Services.EmailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,11 @@ builder.Services.AddSingleton(builder.Configuration
     .Get<EmailConfiguration>());
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+
+builder.Services.AddDbContext<Context>(opts =>
+    opts.UseSqlServer(builder.Configuration.
+        GetConnectionString("sqlConnection")));
+builder.Services.AddControllers();
 
 builder.Services.AddControllersWithViews();
 
